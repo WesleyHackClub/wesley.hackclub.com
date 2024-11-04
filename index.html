@@ -1,9 +1,22 @@
 <marquee>Will be worked on over the next few meetings.</marquee>
 <html>
+  <style>
+    #list_members {
+      background-color:red;
+      border:none;
+      color:black;
+      padding: 15px 32px;
+      text-align:center;
+      display: inline-block;
+      border-radius: 8px;
+    }
+    
+  </style>
 <body>
   <button id="list_members">list members in console</button>
 <script>
   let members = ['Jacques C', 'Michael KF'];
+  const list_members = document.getElementById('list_members');
   list_members.addEventListener('click', () => {
     alert(members);
   });
