@@ -135,6 +135,14 @@ body {
   font-family: "SF Mono", "Roboto Mono", Menlo, Consolas, monospace;
 }
 
+.header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
 .heading {
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-heading);
