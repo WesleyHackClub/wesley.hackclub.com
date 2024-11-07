@@ -141,6 +141,7 @@ body {
   text-align: center;
   font-size: 35px;
   color: white;
+  /*center the header and make it always stay at the top of screen for title card*/
 }
 
 .heading {
