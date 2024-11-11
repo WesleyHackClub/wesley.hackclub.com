@@ -50,7 +50,7 @@ function drawPointIfMousePressed() {
 $('#saveDrawing').on('click', saveDrawing)
 
 function saveDrawing() {
-    saveCanvas()
+    saveCanvas(window.prompt("Save as", "collaborative sketch"))
 }
 
 $('#clearDrawing').on('click', clearDrawing)

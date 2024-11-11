@@ -2,6 +2,7 @@ button {
     padding: 5px;
     background-color: chocolate;
     border-radius: 5px;
+    margin: 5px;
 }
 
 body {
@@ -10,6 +11,7 @@ body {
     overflow-x: hidden;
 }
 
-#controls {
-    outline: 5px;
+input {
+    margin: 5px;
+    border-radius: 5px;
 }
