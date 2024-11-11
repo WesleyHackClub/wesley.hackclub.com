@@ -1,3 +1,4 @@
+var widthSlider;
 var config = {
   apiKey: 'AIxaSyGsAkHke9lXEU_97a8rYpMn7gOH3eWDxrM',
   authDomain: 'collaborative-sketch.firebaseapp.com',
@@ -9,6 +10,8 @@ var pointsData = firebase.database().ref()
 var points = []
 
 function setup() {
+    widthSlider = createSlider(1, 10, 3);
+    widthSlider.position(20, 40);
     var canvas = createCanvas(windowWidth, windowHeight);
     background(255)
     fill(0)
@@ -30,12 +33,14 @@ function draw() {
 
     for (var i = 0; i < points.length; i++) {
       var point = points[i]
-      circle(point.x, point.y, 5)
+      ellipse(point.x, point.y, point.width, point.width);
     }
 }
 
 function drawPoint() {
-    pointsData.push({ x: mouseX, y: mouseY })
+    pointsData.push({x: mouseX,
+        y: mouseY,
+        width: widthSlider.value()});
 }
 
 function drawPointIfMousePressed() {
