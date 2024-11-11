@@ -18,8 +18,10 @@ function setup() {
     pointsData.on('child_removed', function () {
         points = []
     })
-    canvas.mousePressed(drawPoint)
-    canvas.mouseMoved(drawPointIfMousePressed)
+    canvas.mousePressed(drawPoint);
+    canvas.mouseMoved(drawPointIfMousePressed);
+    canvas.touchMoved(drawPoint);
+
 
 }
 
