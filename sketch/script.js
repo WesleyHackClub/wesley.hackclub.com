@@ -26,7 +26,6 @@ function setup() {
 
 function draw() {
     background(255)
-
     for (var i = 0; i < points.length; i++) {
       var point = points[i]
       stroke(point.color);
@@ -59,7 +58,7 @@ function rainbowEffect() {
     }
 }
 
-setInterval(rainbowEffect, 5);
+setInterval(rainbowEffect, 7);
 
 $('#saveDrawing').on('click', saveDrawing)
 
@@ -84,3 +83,4 @@ function hslToHex(h, s, l) {
     };
     return `#${f(0)}${f(8)}${f(4)}`;
 }
+
