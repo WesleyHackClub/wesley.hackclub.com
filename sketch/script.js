@@ -21,8 +21,6 @@ function setup() {
     canvas.mousePressed(drawPoint);
     canvas.mouseMoved(drawPointIfMousePressed);
     canvas.touchMoved(drawPoint);
-
-
 }
 
 function draw() {
@@ -30,6 +28,8 @@ function draw() {
 
     for (var i = 0; i < points.length; i++) {
       var point = points[i]
+      stroke(point.color);
+      fill(point.color);
       ellipse(point.x, point.y, point.width, point.width);
     }
 }
@@ -37,7 +37,8 @@ function draw() {
 function drawPoint() {
     pointsData.push({x: mouseX,
         y: mouseY,
-        width: document.getElementById("size").value});
+        width: document.getElementById("size").value,
+        color: document.getElementById("color").value});
 }
 
 function drawPointIfMousePressed() {
