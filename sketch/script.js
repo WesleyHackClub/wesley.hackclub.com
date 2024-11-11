@@ -7,6 +7,7 @@ var config = {
 firebase.initializeApp(config)
 var pointsData = firebase.database().ref()
 var points = []
+var hslRainbowColor = 1
 
 function setup() {
     var canvas = createCanvas(windowWidth, windowHeight);
@@ -47,6 +48,19 @@ function drawPointIfMousePressed() {
     }
 }
 
+function rainbowEffect() {
+    if (document.getElementById('rainbow').checked == true) {
+        if(hslRainbowColor==359) {
+            hslRainbowColor=1;
+        }
+        hslRainbowColor += 1;
+        document.getElementById("color").value = hslToHex(hslRainbowColor, 100, 50);
+        
+    }
+}
+
+setInterval(rainbowEffect, 5);
+
 $('#saveDrawing').on('click', saveDrawing)
 
 function saveDrawing() {
@@ -58,4 +72,15 @@ $('#clearDrawing').on('click', clearDrawing)
 function clearDrawing() {
     pointsData.remove()
     points = []
+}
+
+function hslToHex(h, s, l) {
+    l /= 100;
+    const a = s * Math.min(l, 1 - l) / 100;
+    const f = n => {
+        const k = (n + h / 30) % 12;
+        const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+        return Math.round(255 * color).toString(16).padStart(2, '0');   // convert to Hex and prefix "0" if needed
+    };
+    return `#${f(0)}${f(8)}${f(4)}`;
 }
