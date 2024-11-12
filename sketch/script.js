@@ -70,19 +70,23 @@ function saveDrawing() {
     saveCanvas(window.prompt("Save as", "collaborative sketch"))
 }
 
+if(localStorage.getItem("deleteDisabled")==null) {
+    localStorage.setItem("deleteDisabled", "0");
+}
 
 function deleteDrawing() {
     if(localStorage.getItem("deleteDisabled")==1) {
+        deleteButton.disabled = true;
         alert("Please wait for 30 seconds");
-    } 
-    if(localStorage.getItem("deleteDisabled")==0) {
+    } else if(localStorage.getItem("deleteDisabled")==0) {
         console.log("deleting")
         clearDrawing()
         localStorage.setItem("deleteDisabled", "1");
         console.log(localStorage.getItem("deleteDisabled"))
         deleteButton.disabled = true;
-        setTimeout(enableDeleteButton(), 30000)
+        setTimeout(enableDeleteButton(), 10000)
     }
+    
 }
 
 function enableDeleteButton() {
@@ -90,7 +94,7 @@ function enableDeleteButton() {
     deleteButton.disabled = false;
 }
 
-$('#clearDrawing').on('click', deleteDrawing)
+$('#clearDrawing').on('click', clearDrawing)
 
 function clearDrawing() {
     pointsData.remove()
