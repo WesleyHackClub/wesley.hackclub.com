@@ -20,6 +20,7 @@ function setup() {
         points = []
     })
     canvas.mousePressed(drawPoint);
+    canvas.mousePressed(drawPointIfMousePressed);
     canvas.mouseMoved(drawPointIfMousePressed);
     canvas.touchMoved(drawPoint);
 }
