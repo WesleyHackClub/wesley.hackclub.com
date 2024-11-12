@@ -67,7 +67,7 @@ function saveDrawing() {
     saveCanvas(window.prompt("Save as", "collaborative sketch"))
 }
 
-$('#clearDrawing').on('click', clearDrawing)
+//$('#clearDrawing').on('click', clearDrawing)
 
 function clearDrawing() {
     pointsData.remove()
