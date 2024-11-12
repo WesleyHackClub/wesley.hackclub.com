@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script data-goatcounter="https://mmkf.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-    
+    <script data-goatcounter="https://mmkf.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>    
     <title>Collaborative sketch</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -10,6 +9,15 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <script>
+      var t = setInterval(function() {
+          if (window.goatcounter && window.goatcounter.visit_count) {
+              clearInterval(t)
+              window.goatcounter.visit_count({append: 'body'})
+          }
+      }, 100)
+   </script>
+   
     <div id="controls">
         <p><button id="saveDrawing">Download image</button><button id="clearDrawing">Delete drawing</button>Size:<input id="size" type="range" min="1" max="50">Color:<input id="color" type="color">Rainbow:<input type="checkbox" id="rainbow"></p>
     </div>
