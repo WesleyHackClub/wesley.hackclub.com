@@ -7,13 +7,13 @@
     <meta charset="utf-8">
     <meta http-equiv="cache-control" content="Private" />
     <link rel="stylesheet" href="theme.css">
-          <div class="header">
-            <h1>
-            that was the imposter header, this is the real one
-            </h1>
-          </div>
   </head>
   <body>
+    <div class="header">
+      <h1>
+      that was the imposter header, this is the real one
+      </h1>
+    </div>
     <header>
       <h2>
         this is the header
@@ -24,7 +24,12 @@
     </h1>
     <img src="image.png">
     <script>
-    
-    </script>
+      var t = setInterval(function() {
+          if (window.goatcounter && window.goatcounter.visit_count) {
+              clearInterval(t)
+              window.goatcounter.visit_count({append: 'body'})
+          }
+      }, 100)
+   </script>
   </body>
 </html>
