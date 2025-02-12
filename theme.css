@@ -84,7 +84,8 @@ nav ul li a {
     padding-left: 2.5vw;
     color: white;
     line-height: 0.8;
-    margin-top: -25vh;
+    padding-top: 2vh;
+    margin-top: -20vh;
 }
 
 .highlight{
@@ -178,6 +179,10 @@ footer:hover{
     40%, 60% {
         transform: translateX(-1px); 
     }
+}
+
+@media (min-width: 900px) {
+
 }
 
  /* @media screen and (max-width: 768px) {
