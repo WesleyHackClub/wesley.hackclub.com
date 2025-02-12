@@ -136,8 +136,8 @@ footer:hover{
 .location{
     position: relative;
     top: 1.5vh;
-    width: 30vw;
-    padding: 2vw;
+    width: 50vw;
+    padding-left: 22vw;
     height: auto;
 }
 
