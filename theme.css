@@ -3,6 +3,7 @@ html, body{
     padding: 0;
     overflow-x: hidden;
     scroll-behavior:smooth;
+    background-color: black;
 }
 
 .cursor {
@@ -89,14 +90,12 @@ nav ul li a {
 }
 
 .highlight{
-    color: black;
-    background-color: yellow;
     font-weight: bold;
     
 }
 
 .name{
-    color: blue;
+    font-weight: bold;
 }
 
 footer{
