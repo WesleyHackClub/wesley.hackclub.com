@@ -126,11 +126,6 @@ footer{
     color: rgb(128, 116, 217);
 }
 
-footer:hover{
-    opacity: 0.9;
-    font-size: 1vw;
-}
-
 .github{
     color: blueviolet;
     text-decoration: none;
