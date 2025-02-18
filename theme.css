@@ -5,7 +5,7 @@ html, body{
     padding: 0;
     overflow-x: hidden;
     scroll-behavior:smooth;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
 }
 
 .cursor {
@@ -22,15 +22,17 @@ html, body{
     overflow-y: hidden;
     overflow-x: hidden;
     box-sizing: border-box;
+
 }
 
-
+.section2 {
+    background: none;
+}
 
 .header {
     display: flex; 
     position: relative;
     left: 60vw;
-    background-color: black;
     color: white;
     font-size: 1.5vw;
     bottom: 7%;
@@ -71,7 +73,6 @@ nav ul li a {
 }
 
 .section1{
-    background-color: black;
     color: #00FF00;
     position: relative;
 }
