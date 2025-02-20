@@ -22,7 +22,7 @@
       window.onload = function() {
         gsap.fromTo(".heading101", { x: -100 }, { duration: 1, x: 0, opacity: 1, ease: "power2.out" });
         gsap.fromTo(".heading102", { x: 100 }, { duration: 1, x: 0, opacity: 1, ease: "power2.out", delay: 0.5 });
-        gsap.fromTo(".intro p", { y: 50 }, { duration: 1, y: 0, opacity: 1, stagger: 0.2, ease: "power2.out", delay: 1 });
+        gsap.fromTo(".intro p", { y: 20, opacity: 0 }, { duration: 1, y: 0, opacity: 1, stagger: 0.2, ease: "power2.out", delay: 1 });
         gsap.fromTo(".members", { y: -50 }, { duration: 1, y: 0, opacity: 1, ease: "power2.out", delay: 1.5 });
         gsap.fromTo("nav ul li, nav ul span", { y: -50 }, { duration: 1, y: 0, opacity: 1, stagger: 0.2, ease: "power2.out", delay: 2 });
       };

@@ -98,6 +98,7 @@ nav ul li a {
 .intro p {
     transition: transform 0.5s ease, opacity 0.5s ease;
     opacity: 0;
+    transform: translateY(20px); /* Initial position for smoother animation */
 }
 
 .highlight{
