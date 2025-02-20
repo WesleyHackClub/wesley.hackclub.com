@@ -20,11 +20,12 @@
 
       // Initialize GSAP animations
       window.onload = function() {
-        gsap.from(".heading101", { duration: 1, x: -100, opacity: 0, ease: "power2.out" });
-        gsap.from(".heading102", { duration: 1, x: 100, opacity: 0, ease: "power2.out", delay: 0.5 });
-        gsap.from(".intro p", { duration: 1, y: 50, opacity: 0, stagger: 0.2, ease: "power2.out", delay: 1 });
-        gsap.from(".members", { duration: 1, y: -50, opacity: 0, ease: "power2.out", delay: 1.5 });
-        gsap.from("nav ul li", { duration: 1, y: -50, opacity: 0, stagger: 0.2, ease: "power2.out", delay: 2 });
+        gsap.set(".heading101, .heading102, .intro p, .members, nav ul li", { opacity: 0 });
+        gsap.fromTo(".heading101", { x: -100 }, { duration: 1, x: 0, opacity: 1, ease: "power2.out" });
+        gsap.fromTo(".heading102", { x: 100 }, { duration: 1, x: 0, opacity: 1, ease: "power2.out", delay: 0.5 });
+        gsap.fromTo(".intro p", { y: 50 }, { duration: 1, y: 0, opacity: 1, stagger: 0.2, ease: "power2.out", delay: 1 });
+        gsap.fromTo(".members", { y: -50 }, { duration: 1, y: 0, opacity: 1, ease: "power2.out", delay: 1.5 });
+        gsap.fromTo("nav ul li", { y: -50 }, { duration: 1, y: 0, opacity: 1, stagger: 0.2, ease: "power2.out", delay: 2 });
       };
     </script>
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css">
