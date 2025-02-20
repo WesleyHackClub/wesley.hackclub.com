@@ -46,6 +46,7 @@ nav ul {
 nav ul li {
     display: inline;
     transition: 0.3s ease-in-out;
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 nav ul li:hover{
@@ -69,6 +70,7 @@ nav ul li a {
     position: relative;
     transition: color 0.3 ease;
     margin-left: 3vw;
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .section1{
@@ -89,6 +91,10 @@ nav ul li a {
     line-height: 0.8;
     padding-top: 2vh;
     margin-top: -20vh;
+}
+
+.intro p {
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .highlight{
@@ -123,6 +129,7 @@ footer{
     left: 2vw;
     top: 2vh;
     color: rgb(128, 116, 217);
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .github{

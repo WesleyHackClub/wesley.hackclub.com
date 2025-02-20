@@ -7,6 +7,7 @@
     <meta http-equiv="cache-control" content="Private" />
     <link rel="stylesheet" href="theme.css">
     <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script>
       // Initialize Lenis
       const lenis = new Lenis({
@@ -16,6 +17,15 @@
       // Listen for the scroll event and log the event data
       lenis.on('scroll', (e) => {
       });
+
+      // Initialize GSAP animations
+      window.onload = function() {
+        gsap.from(".heading101", { duration: 1, x: -100, opacity: 0, ease: "power2.out" });
+        gsap.from(".heading102", { duration: 1, x: 100, opacity: 0, ease: "power2.out", delay: 0.5 });
+        gsap.from(".intro p", { duration: 1, y: 50, opacity: 0, stagger: 0.2, ease: "power2.out", delay: 1 });
+        gsap.from(".members", { duration: 1, y: -50, opacity: 0, ease: "power2.out", delay: 1.5 });
+        gsap.from("nav ul li", { duration: 1, y: -50, opacity: 0, stagger: 0.2, ease: "power2.out", delay: 2 });
+      };
     </script>
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
