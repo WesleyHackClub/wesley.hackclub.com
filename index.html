@@ -25,7 +25,15 @@
         gsap.fromTo(".intro p", { y: 20, opacity: 0 }, { duration: 1, y: 0, opacity: 1, stagger: 0.2, ease: "power2.out", delay: 1 });
         gsap.fromTo(".members", { y: -50 }, { duration: 1, y: 0, opacity: 1, ease: "power2.out", delay: 1.5 });
         gsap.fromTo("nav ul li, nav ul span", { y: -50 }, { duration: 1, y: 0, opacity: 1, stagger: 0.2, ease: "power2.out", delay: 2 });
+
+        if (window.innerWidth < 768) {
+          document.getElementById('smallScreenModal').style.display = 'block';
+        }
       };
+
+      function closeModal() {
+        document.getElementById('smallScreenModal').style.display = 'none';
+      }
     </script>
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,6 +78,14 @@
     <br>
     <br>
     
+    <!-- Modal for small screen devices -->
+    <div id="smallScreenModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p>This website is not designed for mobile devices because the developers are lazy. User error, get a laptop.</p>
+      </div>
+    </div>
+
     <footer>
         <p> &copy; <script>document.write(new Date().getFullYear())</script> Wesley Hack Club</p>
     </footer>
