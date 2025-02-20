@@ -192,28 +192,36 @@ footer{
 
 }
 
- /* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .heading101, .heading102 {
-        font-size: 80px; /* Reduce the font size for smaller screens */
-  /*      margin-left: 10px;
+        font-size: 8vw; /* Reduce the font size for smaller screens */
+        margin-left: 2vw;
     }
-    .section1 .heading102{
+    .section1 .heading102 {
         padding-left: 0;
     }
     .section1 .intro {
-        display: none;
+        font-size: 2vw;
+        margin-top: -10vh;
     }
-    .heading101{
-        margin-top: 5%;
+    .header {
+        left: 10vw;
+        font-size: 3vw;
+        bottom: 5%;
     }
-    .heading101::before,
-    .heading101::after{
-        display: none;
+    .members {
+        font-size: 4vw;
+        left: 1vw;
+        top: 1vh;
     }
-    .heading101:hover::before,
-    .heading101:hover::after{
-        display: none;
-    } */
+    .location {
+        width: 80vw;
+        padding-left: 10vw;
+    }
+    footer {
+        font-size: 2vw;
+    }
+}
 
 /* The Modal (background) */
 .modal {
