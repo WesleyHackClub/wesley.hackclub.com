@@ -20,7 +20,7 @@
 
       // Initialize GSAP animations
       window.onload = function() {
-        gsap.fromTo(".heading101", { x: -100 }, { duration: 1, x: 0, opacity: 1, ease: "power2.out" });
+        gsap.fromTo(".heading101", { x: -100 }, { duration: 0.5, x: 0, opacity: 1, ease: "power2.out" });
         gsap.fromTo(".heading102", { x: 100 }, { duration: 1, x: 0, opacity: 1, ease: "power2.out", delay: 0.5 });
         gsap.fromTo(".intro p", { y: 20, opacity: 0 }, { duration: 1, y: 0, opacity: 1, stagger: 0.2, ease: "power2.out", delay: 1 });
         gsap.fromTo(".members", { y: -50 }, { duration: 1, y: 0, opacity: 1, ease: "power2.out", delay: 1.5 });
@@ -65,20 +65,20 @@
 
         <div class="intro">
             <p> Welcome to the Wesley Hackclub page. </p>
-            <p>The club will be run every </p>
-            <p><span class="highlight">Tuesday lunch time</span> in <span class="highlight">Hamer Wing.</span></p>
+            <p>The club is on every </p>
+            <p><span class="highlight">Tuesday lunch time</span> in the <span class="highlight">Hamer building.</span></p>
             <p>Run by <span class="name">Michael KF</span></p>
         </div>
     </section>
    
-   <section class="section2">
+   <section class="section2 fade-in">
         <img class="location" src="image.png">
     </section>
     <br>
     <br>
     <br>
-    
-    <!-- Modal for small screen devices -->
+
+    <!-- message for phones because mobile support is for smarter people -->
     <div id="smallScreenModal" class="modal">
       <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
