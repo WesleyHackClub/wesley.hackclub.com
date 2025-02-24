@@ -206,8 +206,8 @@ footer{
 }
 
 .fade-in {
-    animation-name: noShow, fadeIn;
-    animation-duration: 8s, 5s;
+    animation-name: fadeIn;
+    animation-duration: 5s;
     animation-timing-function: ease-in-out;
     
 
