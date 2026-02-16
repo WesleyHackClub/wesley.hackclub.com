@@ -3,6 +3,7 @@
 Welcome to the club.
 
 ## TODO:
+- [x] fixed the pages deployment, now it is correctly using github actions
 - [ ] make gud
 - [x] Fix the title text
 - [ ] Fix the website on mobile
