@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Wesley Hack Club</title>
+<head>
+    <title>About Wesley Hack Club</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta http-equiv="cache-control" content="Private" />
@@ -23,11 +23,9 @@
 
       // Initialize GSAP animations
       window.onload = function() {
-        gsap.fromTo(".heading101", { x: -100 }, { duration: 0.5, x: 0, opacity: 1, ease: "power2.out" });
-        gsap.fromTo(".heading102", { x: 100 }, { duration: 1, x: 0, opacity: 1, ease: "power2.out", delay: 0.5 });
-        gsap.fromTo(".intro p", { y: 20, opacity: 0 }, { duration: 1, y: 0, opacity: 1, stagger: 0.2, ease: "power2.out", delay: 1 });
-        gsap.fromTo(".members", { y: -50 }, { duration: 1, y: 0, opacity: 1, ease: "power2.out", delay: 1.5 });
-        gsap.fromTo("nav ul li, nav ul span", { y: -50 }, { duration: 1, y: 0, opacity: 1, stagger: 0.2, ease: "power2.out", delay: 2 });
+        gsap.fromTo(".title", { y: -50 }, { duration: 1, y: 0, opacity: 1, ease: "power2.out"});
+        gsap.fromTo(".members", { y: -50 }, { duration: 1, y: 0, opacity: 1, ease: "power2.out", delay: 0.5 });
+        gsap.fromTo("nav ul li, nav ul span", { y: -50 }, { duration: 1, y: 0, opacity: 1, stagger: 0.2, ease: "power2.out", delay: 1 });
 
         if (window.innerWidth < 768) {
           document.getElementById('smallScreenModal').style.display = 'block';
@@ -42,12 +40,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  </head>
-  <body>
+</head>
+<body>
     <section class="section1">
         <div class="topbar">
           <div class="typing-effect"></div>
           <div class="members">Member Count: 6ish</div>
+          <div class="title">Wesley Hack Club<span class="cursor">|</span></div>
           <header class="header">
               <nav>
                   <ul>
@@ -60,41 +59,28 @@
               </nav>
           </header>
         </div>
-        <br>
-        
-
-        <div class="heading-container">
-            <div class="heading101">Wesley</div>
-            <div class="heading102">HackClub<span class="cursor">|</span></div>
-        </div>
-
-        <div class="intro">
-            <p> Welcome to the Wesley Hackclub page. </p>
-            <p>The club is on every </p>
-            <p><span class="highlight">Tuesday lunch time</span> in the <span class="highlight">Hamer building.</span></p>
-            <p>Run by <span class="name">Michael K-F</span></p>
-        </div>
     </section>
-   
-    <section class="section2 fade-in" style="color: white">
-      <img class="location" src="image.png" alt="Map of where to go to get to Hack Club" width="auto" height="auto">
+    <section class="running fade-in">
+      <div class="info" style="border: none; font-size: 5vh; font-weight: bold; text-decoration: underline; margin-top: 5vh;">What are we doing?</div>
+      <div class="info">Design a PCB, get the manufacturing process payed for</div>
+      <div class="info">Training for CTF (Capture The Flag) competitions some Saturdays. Contact <a href="mailto:lisl.mcguire@wesley.wa.edu.au">lisl.mcguire@wesley.wa.edu.au</a> to get started.</div>
+      <div class="info">Any other YSWS (you ship we ships) that Hack Club is currently running. Check them out here: <a href="https://ysws.hackclub.com" target="_blank">ysws.hackclub.com</a></div>
+      <div class="info">Any hardware or software project you want!</div>
     </section>
     <br>
     <br>
     <br>
 
-    <!-- message for phones because mobile support is for smarter people -->
     <div id="smallScreenModal" class="modal">
       <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
         <p>This website is not designed for mobile devices because the developers are lazy. User error, get a laptop.</p>
       </div>
     </div>
+    
 
     <footer>
         <p> &copy; <script>document.write(new Date().getFullYear())</script> Wesley Hack Club</p>
     </footer>
-    
-    
-  </body>
+</body>
 </html>
